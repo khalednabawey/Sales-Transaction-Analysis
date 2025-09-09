@@ -1,0 +1,24 @@
+# ETL Pipeline Dependencies
+pandas>=1.5.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+loguru>=0.7.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+schedule>=1.2.0
+great-expectations>=0.17.0
+apache-airflow>=2.6.0
+apache-airflow-providers-postgres>=5.0.0
+
+# Data processing and analysis
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Configuration and utilities
+pyyaml>=6.0
+click>=8.0.0
+tqdm>=4.64.0

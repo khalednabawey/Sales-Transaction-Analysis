@@ -1,0 +1,39 @@
+# Database Configuration
+database:
+  host: ${DB_HOST:localhost}
+  port: ${DB_PORT:5432}
+  name: ${DB_NAME:transaction_db}
+  user: ${DB_USER:postgres}
+  password: ${DB_PASSWORD:}
+  
+# ETL Pipeline Configuration
+etl:
+  batch_size: 10000
+  max_retries: 3
+  retry_delay: 5  # seconds
+  
+# Data Sources
+data_sources:
+  transactions:
+    type: csv
+    path: data/raw/upi_transactions_2024.csv
+    encoding: utf-8
+  
+# Data Quality Thresholds
+data_quality:
+  max_null_percentage: 5.0
+  min_record_count: 1000
+  duplicate_threshold: 0.1
+  
+# Logging Configuration
+logging:
+  level: INFO
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {module} | {function} | {message}"
+  rotation: "1 day"
+  retention: "30 days"
+  
+# Output Configuration
+output:
+  processed_data_path: data/processed/
+  reports_path: data/output/reports/
+  logs_path: logs/
